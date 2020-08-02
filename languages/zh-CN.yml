@@ -1,0 +1,26 @@
+common:
+    home: "主页"
+    search: "搜索"
+    archive: "归档"
+    category: "分类"
+    tag: "标签"
+
+drawer:
+    toc: "文章目录"
+    links: "友链"
+
+index:
+    more: '阅读全文'
+    prev: '<i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>上一页'
+    next: '<i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i>下一页'
+    archive: '目前显示的是归档为 <b>%s</b> 的文章'
+    category: '目前显示的是分类为 <b>%s</b> 的文章'
+    tag: '目前显示的是标签为 <b>%s</b> 的文章'
+
+post:
+    date: "创建时间："
+    updated: "最后更新时间："
+    author: "作者："
+    url: "链接："
+    license: "本文采用 %s 进行许可。"
+    license_false: "本文严格禁止转载。"

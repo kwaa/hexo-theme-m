@@ -1,0 +1,9 @@
+<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+    <div <%- fragment_cache ('card_style', function (){
+    return partial ('_partial/card_style');
+    }) %>>
+        <div id="search-container" class="mdui-card-content">
+            <%- partial('_widget/search_' + theme.search.use) %>
+        </div>
+    </div>
+</div>

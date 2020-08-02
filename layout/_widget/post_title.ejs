@@ -1,0 +1,14 @@
+<div class="mdui-card-primary mdui-ripple">
+    <a href="<%- url_for(post.path) %>" role="heading" aria-level="1" class="mdui-card-primary-title mdui-text-color-<%= color %>-text"><%= post.title %></a>
+    <div class="mdui-card-primary-subtitle mdui-typo">
+        <% if(post.categories && post.categories.length) { %>
+        <span><%- list_categories(post.categories, {
+            show_count: false,
+            class: '',
+            style: 'none',
+            separator: ' '
+        }) %> <%= theme.m.syntax %></span><% } %>
+        <span mdui-tooltip="{content:'<%= __("post.date") %><%- date(post.date, "YYYY-MM-DD") %><% if(post.updated) { %><br><%= __("post.updated") %><%- date(post.updated, "YYYY-MM-DD") %><% } %>'}"><%- date(post.date, "YYYY-MM-DD") %> <%= theme.m.syntax %></span>
+        <span><%= post.path %></span>
+    </div>
+</div>

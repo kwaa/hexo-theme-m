@@ -1,0 +1,18 @@
+<% if(page.layout == 'tags') { %>
+    <%- fragment_cache ('page_tags', function (){
+        return partial ('_widget/page_tags');
+    }) %>
+<% } else if(page.layout == 'search') { %>
+    <%- fragment_cache ('page_search', function (){
+        return partial ('_widget/page_search');
+    }) %>
+<% } else if(page.layout == 'links') { %>
+    <%- fragment_cache ('page_links', function (){
+        return partial ('_widget/page_links');
+    }) %>
+<% } else { %>
+<%- partial('_partial/card_post', {post: page}) %>
+<% if(theme.comments.use !== false) { %>
+    <% if(page.comment !== false) { %>
+    <%- partial('_partial/card_comment') %>
+<% }}} %>

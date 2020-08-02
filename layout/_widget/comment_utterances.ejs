@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    (function () {
+        var utterances = document.createElement('script');
+        utterances.type = 'text/javascript';
+        utterances.async = true;
+        utterances.setAttribute('issue-term', '<%= theme.comments.utterances.issue_term %>')
+        utterances.setAttribute('theme', '<%= theme.comments.utterances.theme %>')
+        utterances.setAttribute('repo', '<%= theme.comments.utterances.repo %>')
+        utterances.src = '<%= theme.comments.utterances.src %>';
+        document.getElementById('comment-container').appendChild(utterances);
+    })();
+</script>

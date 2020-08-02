@@ -1,0 +1,19 @@
+<div class="mdui-toolbar mdui-color-grey-900 mdui-m-y-2 mdui-p-x-1" style="<% if(theme.m.opacity) { %>opacity: <%= theme.m.opacity %>; <% } if(theme.m.border_radius) { %>border-radius: <%= theme.m.border_radius %><% } %>">
+    <% if(is_home()) { %>
+    <span class="mdui-typo"><%= config.subtitle %></span>
+    <% } else { %>
+        <% if(is_category()) { %>
+            <span class="mdui-typo"><%- _p("index.category", page.category) %></span>
+        <% } else if(is_tag()) { %>
+            <span class="mdui-typo"><%- _p("index.tag", page.tag) %></span>
+        <% } else if(is_archive()) { %>
+            <% if(is_month()) { %>
+                <span class="mdui-typo"><%- _p("index.archive", page.year + '-' + page.month) %></span>
+            <% } else if(is_year()) { %>
+                <span class="mdui-typo"><%- _p("index.archive", page.year) %></span>
+            <% } %>
+        <% } %>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="<%= config.root %>" class="mdui-btn mdui-btn-raise mdui-ripple"><%= __("common.home") %></a>
+    <% } %>
+</div>

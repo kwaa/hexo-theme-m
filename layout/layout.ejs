@@ -1,0 +1,21 @@
+<%- partial('_partial/head') %>
+<body class="mdui-theme-primary-<%= theme.mdui.primary %> mdui-theme-accent-<%= theme.mdui.accent %> mdui-appbar-with-toolbar">
+    <div class="<% if(theme.m.layout) { %>mdui-theme-layout-<%= theme.m.layout %><% } else { %><%= theme.mdui.layout %><% } %>">
+    <%- fragment_cache ('appbar', function (){
+        return partial ('_partial/appbar');
+        }) %>
+    <%- fragment_cache ('drawer', function (){
+        return partial ('_partial/drawer');
+        }) %>
+    </div>
+<div class="mdui-container-fluid" <% if(theme.plugins.pjax == true) { %>style="opacity: 0"<% } %>>
+        <main id="main" class="mdui-center" <% if(theme.m.max_width) { %>style="max-width:<%= theme.m.max_width %>"<% } %>>
+        <%- body %>
+        </main>
+    </div>
+    <%- fragment_cache ('fab', function (){
+        return partial ('_partial/fab');
+    }) %>
+</body>
+<%- partial('_partial/foot') %>
+</html>

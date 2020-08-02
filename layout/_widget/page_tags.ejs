@@ -1,0 +1,14 @@
+<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+    <div <%- fragment_cache ('card_style', function (){
+    return partial ('_partial/card_style');
+    }) %>>
+        <div class="mdui-card-content mdui-typo">
+            <%- list_tags({
+                show_count: false,
+                class: 'mdui-btn mdui-btn-dense mdui-ripple mdui-m-r-1 m',
+                style: 'none',
+                separator: ''
+            }) %>
+        </div>
+    </div>
+</div>

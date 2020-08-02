@@ -1,0 +1,6 @@
+<%- partial('_partial/card_post', {post: page}) %>
+<%- partial('_widget/post_paginator') %>
+<% if(theme.comments.use !== false) { %>
+    <% if(page.comment !== false) { %>
+    <%- partial('_partial/card_comment') %>
+<% }} %>

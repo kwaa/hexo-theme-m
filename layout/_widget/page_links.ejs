@@ -1,0 +1,17 @@
+<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+    <div <%- fragment_cache ('card_style', function (){
+    return partial ('_partial/card_style');
+    }) %>>
+        <% if(site.data.links) { for(var i in site.data.links) { %>
+        <a class="mdui-list-item mdui-ripple mdui-text-color-theme-text" href="<%= site.data.links[i].url %>"
+            target="_blank">
+            <div class="mdui-list-item-avatar"><img src="<%= site.data.links[i].icon %>" /></div>
+            <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title"><%= i %></div>
+                <div class="mdui-list-item-text mdui-list-item-one-line"><%= site.data.links[i].description %></div>
+            </div>
+        </a>
+        <div class="mdui-divider-inset mdui-m-y-0"></div>
+        <% }} %>
+    </div>
+</div>

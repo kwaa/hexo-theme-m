@@ -1,0 +1,41 @@
+<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+<article <%- fragment_cache ('card_style', function (){
+    return partial ('_partial/card_style');
+}) %>>
+    <% if(post.thumbnail) { %>
+    <div class="mdui-card-media">
+        <img src="<%= post.thumbnail %>" />
+        <% if(theme.posts.thumbnail_title == true) { %>
+        <div class="mdui-card-media-covered <% if(theme.mdui.card_media_covered !== 'normal') { %>mdui-card-media-covered-<%= theme.mdui.card_media_covered %><% } %>">
+            <%- partial('_widget/post_title', {color: 'white'}) %>
+        </div>
+        <% } %>
+    </div>
+    <% } if(!post.thumbnail || theme.posts.thumbnail_title == false) { %>
+    <%- partial('_widget/post_title', {color: 'theme'}) %>
+    <% } %>
+    <% if(is_post() || is_page() || theme.posts.index_content != false) { %>
+    <div class="mdui-divider"></div>
+    <div class="mdui-card-content mdui-typo">
+        <% if(is_post() || is_page() || theme.posts.index_content == 'content' || theme.posts.index_content == 'auto' && !post.excerpt) { %>
+        <%- post.content %>
+        <% if(theme.posts.license !== false) { %>
+        <%- partial ('_widget/post_license', {post: post}) %>
+        <% } %>
+        <% if(post.tags && post.tags.length) { %>
+        <div class="mdui-m-t-2">
+            <%- list_tags(post.tags, {
+                show_count: false,
+                class: 'mdui-btn mdui-btn-dense mdui-ripple mdui-m-r-1 m',
+                style: 'none',
+                separator: ''
+            }) %>
+        </div>
+        <% }} else { %>
+            <%- post.excerpt %>
+            <a class="mdui-btn mdui-btn-block mdui-ripple" href="<%- url_for(post.path) %>"><%= __("index.more") %></a>
+        <% } %>
+    </div>
+    <% } %>
+</article>
+</div>

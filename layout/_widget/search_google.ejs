@@ -1,0 +1,5 @@
+<form action="//google.com/search" method="get" accept-charset="UTF-8" class="mdui-textfield mdui-m-b-2">
+    <i class="mdui-icon material-icons">search</i>
+    <input type="search" name="q" class="mdui-textfield-input" placeholder="<%= __('common.search') %>">
+    <input type="hidden" name="sitesearch" value="<% if(theme.search.google.search_site) { %><%= theme.search.google.search_site %><% } else { %><%= config.root %><% } %>">
+</form>

@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+
+<% if(theme.head.preconnect) { theme.head.preconnect.forEach(function(link) { %>
+    <link rel="preconnect" href="<%= link %>">
+<% })} if(theme.head.prefetch) { theme.head.prefetch.forEach(function(link) { %>
+    <link rel="prefetch" href="<%= link %>">
+<% })} if(theme.head.dns_prefetch) { theme.head.dns_prefetch.forEach(function(link) { %>
+    <link rel="dns-prefetch" href="<%= link %>">
+<% })} %>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<% if(theme.head.favicon) { %>
+<link rel="icon shortcut" href="<%= theme.head.favicon %>">
+<% } if(theme.head.high_res_icon) { %>
+<link rel="icon" type="image/png" href="<%= theme.head.high_res_icon %>">
+<% } if(theme.head.apple_touch_icon) { %>
+<link rel="apple-touch-icon" href="<%= url_for(theme.head.apple_touch_icon) %>">
+<% } if(theme.head.theme_color) { %>
+<meta name="theme-color" content="<%= theme.head.theme_color %>">
+<% } %>
+
+<%- open_graph({twitter_id: theme.open_graph.twitter, google_plus: theme.open_graph.google_plus, fb_admins: theme.open_graph.fb_admins, fb_app_id: theme.open_graph.fb_app_id}) %>
+<% if (theme.url.rss){ %>
+    <% if(config.feed.type == "atom"){ %>
+        <link rel=alternate type="application/atom+xml" href="<%= theme.url.rss || '#' %>">
+    <% } else if(config.feed.type == "rss2") { %>
+        <link rel=alternate type="application/rss+xml" href="<%= theme.url.rss || '#' %>">
+<% }} %>
+<%- css(theme.vendors.mdui_css) %>
+<% if(theme.plugins.prism == true) { %>
+    <%- css(theme.vendors.prism_theme) %>
+<% } %>
+<style>
+    html,body{scroll-behavior:smooth;min-height:100vh}.mdui-hoverable:hover,.mdui-hoverable:focus{-webkit-box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;}.mdui-card-primary-title{text-decoration:none !important;}.page-number{display:none !important;}.mdui-container-fluid{transition:opacity .4s;}.mdui-typo code, .mdui-typo pre{font-family:'Source Code Pro', 'Courier New', Consolas, Courier, monospace !important;}
+    <% if(theme.m.css) { %>
+        <%- theme.m.css %>
+    <% } %>
+</style>

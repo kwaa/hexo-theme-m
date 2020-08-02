@@ -1,0 +1,8 @@
+<nav class="<% if(theme.m.layout) { %>mdui-theme-layout-<%= theme.m.layout %><% } else { %><%= theme.mdui.layout %><% } %> mdui-color-transparent mdui-row mdui-row-gapless mdui-m-b-2 mdui-m-x-0">
+    <%- m_paginator({
+        prev_text: __('index.prev'),
+        next_text: __('index.next'),
+        space: '',
+        escape: false
+    }) %>
+</nav>

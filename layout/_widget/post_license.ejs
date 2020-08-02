@@ -1,0 +1,14 @@
+<blockquote class="mdui-m-x-0 mdui-m-t-4">
+    <strong>
+        <%= __('post.author') %><a href="<%= theme.url.avatar %>"><%= config.author %></a><br>
+        <%= __('post.url') %><a href="<%= post.permalink %>"><%= post.permalink %></a><br>
+        <% if(post.license) { %>
+        <% if(post.license == 'false') { %>
+            <%= __('post.license_false') %>
+        <% } else { %>
+            <%- _p('post.license', post.license) %>
+        <% }} else { %>
+            <%- _p('post.license', theme.posts.license) %>
+        <% } %>
+    </strong>
+</blockquote>

@@ -1,0 +1,96 @@
+# Site Settings
+m:
+  dev_mode: false # do not change unless you know what you are doing
+  syntax: "-" # syntax
+  opacity: "1" # card opacity
+  border_radius: "4px" # card border-radius
+  max_width: "720px" # container max width
+  layout: "light" # appbar/drawer layout, light / dark / auto
+  css: |
+    body{background-color:　#f6f6f6}
+mdui:
+  primary: "indigo" # https://mdui.org/docs/color
+  accent: "pink" # https://mdui.org/docs/color
+  layout: "light" # card layout, light / dark / auto
+  shadow: "1" # card shadow, 0-16
+  hoverable: true # card hoverable, false / true
+  card_media_covered: normal # card media covered, normal / gradient / transparent 
+
+head:
+  theme_color: "#3F51B5"
+  favicon: # 16*16 / 32*32 / 48*48
+  high_res_icon: # 192*192
+  apple_touch_icon: # 180*180
+  preconnect:
+  prefetch:
+  dns_prefetch:
+    - "//cdn.jsdelivr.net"
+
+url:
+  rss: "/atom.xml"
+  avatar: "/about/"
+  search: "/search/"
+  links: "/links/"
+  hosted_on: ""
+
+appbar:
+  scroll_hide: true
+  title: true
+  search: true
+  rss: false
+
+drawer:
+  avatar: 
+  toc: false
+  search: false
+  home: true
+  archives: true
+  categories: true
+  tags: false
+  links: false
+  rss: false
+
+footer:
+  since: 
+  hosted_on: 
+  custom: |
+
+open_graph:
+  google_analytics:
+  twitter:
+  google_plus:
+  fb_admins:
+  fb_app_id:
+
+posts:
+  thumbnail_title: false # true /false
+  index_content: auto # false / auto / excerpt / content
+  license: '<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>'
+
+comments:
+  use:  # utterances
+  utterances:
+    repo: 
+    issue_term: pathname
+    theme: github-light
+    src: "https://utteranc.es/client.js"
+
+search:
+  use: google # google
+  google:
+    search_site: 
+
+plugins:
+  pjax: false
+  pangu: false
+  prism: false
+  busuanzi: false
+
+vendors:
+  mdui_css: "https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" # 1.0.0
+  mdui_js: "https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js" # 1.0.0
+  pjax_js: "https://cdn.jsdelivr.net/npm/pjax/pjax.js"
+  pangu_js: "https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" # 4.0.7
+  prism_js: "https://cdn.jsdelivr.net/npm/prismjs@1.20.0/prism.min.js" # 1.2.0
+  prism_theme: "https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-material-dark.css"
+  busuanzi_js: "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" # 2.3

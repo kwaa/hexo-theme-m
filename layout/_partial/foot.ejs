@@ -1,0 +1,34 @@
+<%- js(theme.vendors.mdui_js) %>
+<% if(theme.plugins.pangu == true) { %>
+    <%- js(theme.vendors.pangu_js) %>
+<% } if(theme.plugins.prism == true) { %>
+    <%- js(theme.vendors.prism_js) %>
+<% } %>
+<script>
+    var $ = mdui.$;
+    function fadeIn() {
+        $(".mdui-container-fluid").css('opacity', '1');
+        <% if(theme.plugins.pangu == true) { %>
+            pangu.autoSpacingPage();
+        <% } if(theme.plugins.prism == true) { %>
+            Prism.highlightAll();
+        <% } %>
+    };fadeIn()
+</script>
+<% if(theme.plugins.pjax == true) { %>
+<%- js(theme.vendors.pjax_js) %>
+<script>
+    var pjax = new Pjax({
+        selectors: [
+            "title",
+            "meta[name=description]",
+            "#main"
+        ]
+    })
+    function fadeOut() {
+        $(".mdui-container-fluid").css('opacity', '0');
+    }
+    document.addEventListener('pjax:send', fadeOut)
+    document.addEventListener("pjax:complete", fadeIn)
+</script>
+<% } %>

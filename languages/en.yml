@@ -1,0 +1,26 @@
+common:
+    home: "Home"
+    search: "Search"
+    archive: "Archives"
+    category: "Categories"
+    tag: "Tags"
+
+drawer:
+    toc: "Table of Contents"
+    links: "Links"
+
+index:
+    more: 'View more'
+    prev: '<i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>Newer'
+    next: '<i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i>Older'
+    archive: 'Currently showing articles with archive <b>%s</b>'
+    category: 'Currently showing articles with category <b>%s</b>'
+    tag: 'Currently showing articles with tag <b>%s</b>'
+
+post:
+    date: "Created: "
+    updated: "Updated: "
+    author: "Author: "
+    url: "URL: "
+    license: "This work is licensed under a %s ."
+    license_false: "This work is strictly prohibited reproduced."

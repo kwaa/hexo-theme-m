@@ -1,0 +1,29 @@
+<nav class="<% if(theme.m.layout) { %>mdui-theme-layout-<%= theme.m.layout %><% } else { %><%= theme.mdui.layout %><% } %> mdui-color-transparent mdui-row mdui-m-b-2">
+    <% if (page.prev) { %>
+        <div class="mdui-col-xs-12 mdui-m-b-2">
+            <a class="extend prev mdui-btn mdui-ripple mdui-float-left mdui-text-truncate" rel="prev"
+                style="max-width: 100%" href="<%- url_for(page.prev.path) %>">
+                <i class="mdui-icon mdui-icon-left material-icons">arrow_back</i><%= page.prev.title %>
+            </a>
+        </div>
+    <% } else { %>
+        <div class="mdui-col-xs-12 mdui-m-b-2">
+            <span disabled class="extend prev mdui-btn mdui-ripple mdui-float-left" rel="prev">
+                <i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>
+            </span>
+        </div>
+    <% } if (page.next) { %>
+        <div class="mdui-col-xs-12">
+            <a class="extend next mdui-btn mdui-ripple mdui-float-right mdui-text-truncate" rel="next"
+                style="max-width: 100%" href="<%- url_for(page.next.path) %>">
+                <i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i><%= page.next.title %>
+            </a>
+        </div>
+    <% } else { %>
+        <div class="mdui-col-xs-12">
+            <span disabled class="extend next mdui-btn mdui-ripple mdui-float-right" rel="next">
+                <i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i>
+            </span>
+        </div>
+    <% } %>
+</nav>
