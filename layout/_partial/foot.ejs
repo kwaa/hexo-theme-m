@@ -3,7 +3,9 @@
     <%- js(theme.vendors.pangu_js) %>
 <% } if(theme.plugins.prism == true) { %>
     <%- js(theme.vendors.prism_js) %>
-<% } %>
+<% } if(theme.plugins.script) { theme.plugins.script.forEach(function(link) { %>
+    <script src="<%= link %>"></script>
+<% })} %>
 <script>
     var $ = mdui.$;
     function fadeIn() {
@@ -12,6 +14,8 @@
             pangu.autoSpacingPage();
         <% } if(theme.plugins.prism == true) { %>
             Prism.highlightAll();
+        <% } if(theme.m.init) { %>
+            <%- theme.m.init %>
         <% } %>
     };fadeIn()
 </script>

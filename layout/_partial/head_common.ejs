@@ -1,4 +1,7 @@
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <% if(theme.head.preconnect) { theme.head.preconnect.forEach(function(link) { %>
     <link rel="preconnect" href="<%= link %>">
@@ -6,11 +9,14 @@
     <link rel="prefetch" href="<%= link %>">
 <% })} if(theme.head.dns_prefetch) { theme.head.dns_prefetch.forEach(function(link) { %>
     <link rel="dns-prefetch" href="<%= link %>">
+<% })} if(theme.head.stylesheet) { theme.head.stylesheet.forEach(function(link) { %>
+    <link rel="stylesheet" href="<%= link %>">
 <% })} %>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<%- css(theme.vendors.mdui_css) %>
+<% if(theme.plugins.prism == true) { %>
+    <%- css(theme.vendors.prism_theme) %>
+<% } %>
 
 <% if(theme.head.favicon) { %>
 <link rel="icon shortcut" href="<%= theme.head.favicon %>">
@@ -29,10 +35,7 @@
     <% } else if(config.feed.type == "rss2") { %>
         <link rel=alternate type="application/rss+xml" href="<%= theme.url.rss || '#' %>">
 <% }} %>
-<%- css(theme.vendors.mdui_css) %>
-<% if(theme.plugins.prism == true) { %>
-    <%- css(theme.vendors.prism_theme) %>
-<% } %>
+
 <style>
     html,body{scroll-behavior:smooth;min-height:100vh}.mdui-hoverable:hover,.mdui-hoverable:focus{-webkit-box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;}.mdui-card-primary-title{text-decoration:none !important;}.page-number{display:none !important;}.mdui-container-fluid{transition:opacity .4s;}.mdui-typo code, .mdui-typo pre{font-family:'Source Code Pro', Consolas, Menlo, monospace !important;}
     <% if(theme.m.css) { %>

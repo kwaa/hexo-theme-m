@@ -8,6 +8,8 @@ m:
   layout: "light" # appbar/drawer layout, light / dark / auto
   css: |
     body{background-color:　#f6f6f6}
+  init: |
+
 mdui:
   primary: "indigo" # https://mdui.org/docs/color
   accent: "pink" # https://mdui.org/docs/color
@@ -25,6 +27,7 @@ head:
   prefetch:
   dns_prefetch:
     - "//cdn.jsdelivr.net"
+  stylesheet:
 
 url:
   rss: "/atom.xml"
@@ -84,7 +87,7 @@ plugins:
   pjax: false
   pangu: false
   prism: false
-  busuanzi: false
+  script:
 
 vendors:
   mdui_css: "https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" # 1.0.0
