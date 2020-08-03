@@ -25,7 +25,7 @@
     var pjax = new Pjax({
         selectors: [
             "title",
-            "meta[name=description]",
+            <% if(config.description) { %>"meta[name=description]",<% } %>
             "#main"
         ]
     })
