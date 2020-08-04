@@ -4,7 +4,7 @@
 }) %>>
     <% if(post.thumbnail) { %>
     <div class="mdui-card-media">
-        <img src="<%= post.thumbnail %>" />
+        <img loading="lazy" alt="thumbnail" src="<%= post.thumbnail %>" />
         <% if(theme.posts.thumbnail_title == true) { %>
         <div class="mdui-card-media-covered <% if(theme.mdui.card_media_covered !== 'normal') { %>mdui-card-media-covered-<%= theme.mdui.card_media_covered %><% } %>">
             <%- partial('_widget/post_title', {color: 'white'}) %>
