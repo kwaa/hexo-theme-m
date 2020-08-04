@@ -3,14 +3,16 @@
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-<% if(theme.head.preconnect) { theme.head.preconnect.forEach(function(link) { %>
-    <link rel="preconnect" href="<%= link %>">
-<% })} if(theme.head.prefetch) { theme.head.prefetch.forEach(function(link) { %>
-    <link rel="prefetch" href="<%= link %>">
-<% })} if(theme.head.dns_prefetch) { theme.head.dns_prefetch.forEach(function(link) { %>
-    <link rel="dns-prefetch" href="<%= link %>">
-<% })} if(theme.head.stylesheet) { theme.head.stylesheet.forEach(function(link) { %>
-    <link rel="stylesheet" href="<%= link %>">
+<% if(theme.head.preload) { theme.head.preload.forEach(function(content) { %>
+    <link rel="preload" <%- content %>>
+<% })} if(theme.head.preconnect) { theme.head.preconnect.forEach(function(content) { %>
+    <link rel="preconnect" <%- content %>>
+<% })} if(theme.head.prefetch) { theme.head.prefetch.forEach(function(content) { %>
+    <link rel="prefetch" <%- content %>>
+<% })} if(theme.head.dns_prefetch) { theme.head.dns_prefetch.forEach(function(content) { %>
+    <link rel="dns-prefetch" <%- content %>>
+<% })} if(theme.head.stylesheet) { theme.head.stylesheet.forEach(function(content) { %>
+    <link rel="stylesheet" <%- content %>>
 <% })} %>
 
 <%- css(theme.vendors.mdui_css) %>
@@ -28,7 +30,6 @@
 <meta name="theme-color" content="<%= theme.head.theme_color %>">
 <% } %>
 
-<%- open_graph({twitter_id: theme.open_graph.twitter, google_plus: theme.open_graph.google_plus, fb_admins: theme.open_graph.fb_admins, fb_app_id: theme.open_graph.fb_app_id}) %>
 <% if (theme.url.rss){ %>
     <% if(config.feed.type == "atom"){ %>
         <link rel=alternate type="application/atom+xml" href="<%= theme.url.rss || '#' %>">

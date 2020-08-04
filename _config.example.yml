@@ -23,6 +23,7 @@ head:
   favicon: # 16*16 / 32*32 / 48*48
   high_res_icon: # 192*192
   apple_touch_icon: # 180*180
+  preload:
   preconnect:
   prefetch:
   dns_prefetch:
