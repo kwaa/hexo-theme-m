@@ -1,4 +1,6 @@
 # M
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkwaa%2Fm.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkwaa%2Fm?ref=badge_shield)
+
 
 ## Demo
 
@@ -23,3 +25,6 @@ Copyright © 2020 Ai Hoshikawa <kwa@kwaa.dev>
 This work is free. You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To Public License, Version 2,
 as published by Sam Hocevar. See the [COPYING](https://github.com/kwaa/m/blob/master/COPYING) file for more details.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkwaa%2Fm.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkwaa%2Fm?ref=badge_large)
