@@ -7,7 +7,7 @@ Yet Another Material Theme for Hexo.
 ###### via NPM (currently unavailable)
 
 ```bash
-pnpm add hexo-theme-m
+pnpm add hexo-theme-m # pnpm
 # yarn add hexo-theme-m # yarn
 # npm i hexo-theme-m # npm
 ```
@@ -15,7 +15,8 @@ pnpm add hexo-theme-m
 ###### via GitHub
 
 ```bash
-git clone https://github.com/kwaa/hexo-theme-m themes/m
+git clone https://github.com/kwaa/hexo-theme-m themes/m # git
+# npx degit kwaa/hexo-theme-m themes/m # degit
 ```
 
 ## License
