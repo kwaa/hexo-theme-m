@@ -8,6 +8,7 @@ m:
   layout: "light" # appbar/drawer layout, light / dark / auto
   css: |
     body{background-color: #f6f6f6}
+
 mdui:
   primary: "indigo" # https://mdui.org/docs/color
   accent: "pink" # https://mdui.org/docs/color
@@ -72,7 +73,7 @@ posts:
   license: '<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>'
 
 comments:
-  use:  # utterances
+  use: false # utterances
   utterances:
     repo: 
     issue_term: pathname
