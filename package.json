@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "license": "WTFPL",
   "description": "Theme M for Hexo.",
-  "repository": "kwaa/m",
-  "homepage": "https://github.com/kwaa/m#readme",
-  "bugs": "https://github.com/kwaa/m/issues",
+  "repository": "kwaa/hexo-theme-m",
+  "homepage": "https://github.com/kwaa/hexo-theme-m#readme",
+  "bugs": "https://github.com/kwaa/hexo-theme-m/issues",
   "author": "藍+85CD",
   "keywords": [
     "hexo",
