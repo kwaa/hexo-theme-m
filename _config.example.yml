@@ -7,7 +7,7 @@ m:
   max_width: "720px" # container max width
   layout: "light" # appbar/drawer layout, light / dark / auto
   css: |
-    body{background-color:　#f6f6f6}
+    body{background-color: #f6f6f6}
 mdui:
   primary: "indigo" # https://mdui.org/docs/color
   accent: "pink" # https://mdui.org/docs/color
