@@ -1,19 +1,16 @@
 {
   "name": "hexo-theme-m",
   "version": "0.0.1",
+  "license": "WTFPL",
   "description": "Theme M for Hexo.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kwaa/m.git"
-  },
+  "repository": "kwaa/m",
+  "homepage": "https://github.com/kwaa/m#readme",
+  "bugs": "https://github.com/kwaa/m/issues",
+  "author": "藍+85CD",
   "keywords": [
     "hexo",
-    "hexo-theme"
-  ],
-  "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/kwaa/m/issues"
-  },
-  "homepage": "https://github.com/kwaa/m#readme"
+    "hexo-theme",
+    "mdui",
+    "material design"
+  ]
 }
