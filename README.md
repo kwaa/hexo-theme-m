@@ -1,11 +1,6 @@
 # M
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkwaa%2Fm.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkwaa%2Fm?ref=badge_shield)
 
-
-## Demo
-
-[./kwaa.dev](https://kwaa.dev)
-
 ## How to use
 
 ``` bash
