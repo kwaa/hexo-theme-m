@@ -1,17 +1,22 @@
-# M
+# Hexo Theme M
 
-## How to use
+Yet Another Material Theme for Hexo.
 
-``` bash
-git clone https://github.com/kwaa/m themes/m
-nano ./_config.yml
-cp themes/m/_config.example.yml themes/m/_config.yml
-nano themes/m/_config.yml
+## Usage
+
+###### via NPM (currently unavailable)
+
+```bash
+pnpm add hexo-theme-m
+# yarn add hexo-theme-m # yarn
+# npm i hexo-theme-m # npm
 ```
 
-## Contributing
+###### via GitHub
 
-All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
+```bash
+git clone https://github.com/kwaa/hexo-theme-m themes/m
+```
 
 ## License
 
