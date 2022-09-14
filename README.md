@@ -15,7 +15,4 @@ All kinds of contributions (enhancements, new features, documentation & code imp
 
 ## License
 
-Copyright © 2020 Ai Hoshikawa <kwa@kwaa.dev>
-This work is free. You can redistribute it and/or modify it under the
-terms of the Do What The Fuck You Want To Public License, Version 2,
-as published by Sam Hocevar. See the [COPYING](https://github.com/kwaa/m/blob/master/COPYING) file for more details.
+Licensed under the [WTFPL](http://www.wtfpl.net), See the [COPYING](COPYING) file for more details.
