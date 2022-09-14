@@ -7,9 +7,9 @@ Yet Another Material Theme for Hexo.
 ###### via NPM (currently unavailable)
 
 ```bash
-pnpm add hexo-theme-m # pnpm
+npm i hexo-theme-m # npm
+# pnpm add hexo-theme-m # pnpm
 # yarn add hexo-theme-m # yarn
-# npm i hexo-theme-m # npm
 ```
 
 ###### via GitHub
