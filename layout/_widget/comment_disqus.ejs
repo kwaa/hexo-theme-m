@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    const disqus_config = () => {
+        this.page.url = '<%= page.permalink %>';
+        this.page.identifier = '<%= page.path %>';
+        this.page.title = '<%= page.title %>';
+    };
+    (() => {
+        let disqus = document.createElement('script');
+        disqus.type = 'text/javascript';
+        disqus.async = true;
+        disqus.src = '<%- theme.comments.disqus.src %>';
+        disqus.setAttribute('data-timestamp', '' + new Date());
+        document.getElementById('disqus_thread').appendChild(disqus);
+    })();
+</script>

@@ -8,8 +8,6 @@ m:
   layout: "light" # appbar/drawer layout, light / dark / auto
   css: |
     body{background-color:　#f6f6f6}
-  init: |
-
 mdui:
   primary: "indigo" # https://mdui.org/docs/color
   accent: "pink" # https://mdui.org/docs/color
@@ -17,18 +15,17 @@ mdui:
   shadow: "1" # card shadow, 0-16
   hoverable: true # card hoverable, false / true
   card_media_covered: normal # card media covered, normal / gradient / transparent 
+  drawer_close: true # false / true
 
 head:
   theme_color: "#3F51B5"
   favicon: # 16*16 / 32*32 / 48*48
   high_res_icon: # 192*192
   apple_touch_icon: # 180*180
-  preload:
   preconnect:
   prefetch:
   dns_prefetch:
     - "//cdn.jsdelivr.net"
-  stylesheet:
 
 url:
   rss: "/atom.xml"
@@ -57,6 +54,8 @@ drawer:
 footer:
   since: 
   hosted_on: 
+  powered_by_hexo: true
+  theme_m: true
   custom: |
 
 open_graph:
@@ -69,6 +68,7 @@ open_graph:
 posts:
   thumbnail_title: false # true /false
   index_content: auto # false / auto / excerpt / content
+  show_categories: false
   license: '<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>'
 
 comments:
@@ -87,7 +87,7 @@ search:
 plugins:
   pjax: false
   pangu: false
-  prism: false
+  pwa: false
   script:
 
 vendors:

@@ -1,8 +1,12 @@
 <nav class="<% if(theme.m.layout) { %>mdui-theme-layout-<%= theme.m.layout %><% } else { %><%= theme.mdui.layout %><% } %> mdui-color-transparent mdui-row mdui-row-gapless mdui-m-b-2 mdui-m-x-0">
-    <%- m_paginator({
-        prev_text: __('index.prev'),
-        next_text: __('index.next'),
-        space: '',
-        escape: false
-    }) %>
+    <div class="mdui-col-xs-12 mdui-col-sm-6">
+        <% if (page.prev) { %><a class="mdui-btn mdui-ripple mdui-float-left" rel="prev" href="<%- url_for(page.prev_link) %>">
+        <% } else { %><a class="mdui-btn mdui-ripple mdui-float-left" rel="prev" disabled><% } %>
+        <i class="mdui-icon mdui-icon-left material-icons">arrow_back</i><%= __('index.prev') %></a>
+    </div>
+    <div class="mdui-col-xs-12 mdui-col-sm-6">
+        <% if (page.next) { %><a class="mdui-btn mdui-ripple mdui-float-right" rel="next" href="<%- url_for(page.next_link) %>">
+        <% } else { %><a class="mdui-btn mdui-ripple mdui-float-right" rel="next" disabled><% } %>
+        <i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i><%= __('index.next') %></a>
+    </div>
 </nav>

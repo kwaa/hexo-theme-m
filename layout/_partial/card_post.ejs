@@ -1,5 +1,4 @@
-<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
-<article <%- fragment_cache ('card_style', function (){
+<<% if(is_post() || is_page()) { %>article<% } else { %>section<% } %> <%- fragment_cache ('card_style', function (){
     return partial ('_partial/card_style');
 }) %>>
     <% if(post.thumbnail) { %>
@@ -19,23 +18,13 @@
     <div class="mdui-card-content mdui-typo">
         <% if(is_post() || is_page() || theme.posts.index_content == 'content' || theme.posts.index_content == 'auto' && !post.excerpt) { %>
         <%- post.content %>
-        <% if(theme.posts.license !== false) { %>
+        <% if(theme.posts.license !== false && post.license !== false) { %>
         <%- partial ('_widget/post_license', {post: post}) %>
-        <% } %>
-        <% if(post.tags && post.tags.length) { %>
-        <div class="mdui-m-t-2">
-            <%- list_tags(post.tags, {
-                show_count: false,
-                class: 'mdui-btn mdui-btn-dense mdui-ripple mdui-m-r-1 m',
-                style: 'none',
-                separator: ''
-            }) %>
-        </div>
         <% }} else { %>
             <%- post.excerpt %>
+            <% if(theme.posts.view_more !== false && post.view_more !== false) { %>
             <a class="mdui-btn mdui-btn-block mdui-ripple" href="<%- url_for(post.path) %>"><%= __("index.more") %></a>
-        <% } %>
+        <% }} %>
     </div>
     <% } %>
-</article>
-</div>
+</<% if(is_post() || is_page()) { %>article<% } else { %>section<% } %>>

@@ -11,8 +11,8 @@ drawer:
 
 index:
     more: '阅读全文'
-    prev: '<i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>上一页'
-    next: '<i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i>下一页'
+    prev: '上一页'
+    next: '下一页'
     archive: '目前显示的是归档为 <b>%s</b> 的文章'
     category: '目前显示的是分类为 <b>%s</b> 的文章'
     tag: '目前显示的是标签为 <b>%s</b> 的文章'

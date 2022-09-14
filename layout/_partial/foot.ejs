@@ -1,38 +1,42 @@
 <%- js(theme.vendors.mdui_js) %>
-<% if(theme.plugins.pangu == true) { %>
-    <%- js(theme.vendors.pangu_js) %>
-<% } if(theme.plugins.prism == true) { %>
-    <%- js(theme.vendors.prism_js) %>
+<% if(theme.plugins.pangu) { %>
+    <script src="<%= theme.vendors.pangu_js %>"></script>
 <% } if(theme.plugins.script) { theme.plugins.script.forEach(function(link) { %>
     <script src="<%= link %>"></script>
 <% })} %>
 <script>
     var $ = mdui.$;
-    function fadeIn() {
-        $(".mdui-container-fluid").css('opacity', '1');
-        <% if(theme.plugins.pangu == true) { %>
-            pangu.autoSpacingPage();
-        <% } if(theme.plugins.prism == true) { %>
-            Prism.highlightAll();
-        <% } if(theme.m.init) { %>
-            <%- theme.m.init %>
-        <% } %>
-    };fadeIn()
+    function init(){
+        //<% if(theme.plugins.pangu == true) { %>
+        pangu.autoSpacingPage();
+        //<% } %>
+    }
+    window.addEventListener("load", () => {
+        //<% if(theme.plugins.pwa == true) { %>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("<% if(theme.vendors.serviceworker) { %><%- theme.vendors.serviceworker %><% } else { %><%= url_for('/sw.js') %><% } %>")
+        }
+        //<% } %>
+        init()
+    }, {once: true});
 </script>
 <% if(theme.plugins.pjax == true) { %>
 <%- js(theme.vendors.pjax_js) %>
 <script>
     var pjax = new Pjax({
-        selectors: [
-            "title",
-            <% if(config.description) { %>"meta[name=description]",<% } %>
-            "#main"
-        ]
-    })
-    function fadeOut() {
-        $(".mdui-container-fluid").css('opacity', '0');
-    }
-    document.addEventListener('pjax:send', fadeOut)
-    document.addEventListener("pjax:complete", fadeIn)
+        selectors: ["title",".mdui-container-fluid"],
+        switches: {
+            ".mdui-container-fluid": function(oldEl, newEl) {
+                $('.mdui-container-fluid').css('opacity', '0');
+                setTimeout(() => {
+                    oldEl.innerHTML = newEl.innerHTML;
+                    $('.mdui-container-fluid').css('opacity', '1');
+                    this.onSwitch();
+                    init();
+                },400);
+            },
+        },
+        cacheBust: false,
+    });
 </script>
 <% } %>

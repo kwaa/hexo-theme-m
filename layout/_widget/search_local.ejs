@@ -1,0 +1,29 @@
+<form onkeydown="if (event.keyCode == 13) return false" class="mdui-textfield mdui-m-b-2">
+    <i class="mdui-icon material-icons">search</i>
+    <input id="local-input" type="search" name="q" class="mdui-textfield-input"
+        placeholder="<%= __('common.search') %>" disabled>
+</form>
+<div id="local-result" style="min-height:100vh; transition: all .4s" class="mdui-list">
+</div>
+<script>
+    fetch(`<% if(theme.search.local.url) { %><%- theme.search.local.url %><% } else { %><%- url_for('search.json') %><% } %>`)
+        .then(res => res.json().then(data => {
+            document.getElementById('local-input').disabled = false
+            document.getElementById('local-input').addEventListener('input', () => {
+                let keyword = document.getElementById('local-input').value.trim().toLowerCase()
+                document.getElementById('local-result').innerHTML = ''
+                if (keyword.length <= 0) return
+                data.forEach(({title, content, url}) => {
+                    const append = excerpt => document.getElementById('local-result').insertAdjacentHTML('beforeend', `
+                        <a href=${url} class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title mdui-list-item-one-line">${title}</div>
+                                <div class="mdui-list-item-text mdui-list-item-two-line">${excerpt}</div>
+                            </div>
+                        </a>`)
+                    if (content.toLowerCase().includes(keyword)) append(content.substring((content.toLowerCase().indexOf(keyword) - 9), (content.toLowerCase().indexOf(keyword) + 130)))
+                    else if (title.toLowerCase().includes(keyword)) append(content.substring(0, 139))
+                })
+            })
+        }))
+</script>

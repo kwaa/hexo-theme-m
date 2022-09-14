@@ -1,0 +1,26 @@
+common:
+    home: "ホーム"
+    search: "検索"
+    archive: "アーカイブ"
+    category: "カテゴリ"
+    tag: "タグ"
+
+drawer:
+    toc: "見出し"
+    links: "友達"
+
+index:
+    more: '続きを読む'
+    prev: '前のページ'
+    next: '次のページ'
+    archive: 'Currently showing articles with archive <b>%s</b>'
+    category: 'Currently showing articles with category <b>%s</b>'
+    tag: 'Currently showing articles with tag <b>%s</b>'
+
+post:
+    date: "投稿日："
+    updated: "編集日："
+    author: "著者："
+    url: "リンク："
+    license: "This work is licensed under a %s ."
+    license_false: "This work is strictly prohibited reproduced."

@@ -1,14 +1,24 @@
 <div class="mdui-card-primary mdui-ripple">
-    <a href="<%- url_for(post.path) %>" role="heading" aria-level="1" class="mdui-card-primary-title mdui-text-color-<%= color %>-text"><%= post.title %></a>
-    <div class="mdui-card-primary-subtitle mdui-typo">
+    <div class="mdui-card-primary-title">
+        <a role="heading" aria-level="1" class="mdui-text-color-<%= color %>-text" <%if(post !== page) { %>href="<%- url_for(post.path) %>"<% } %>><%= post.title %></a>
         <% if(post.categories && post.categories.length) { %>
-        <span><%- list_categories(post.categories, {
+        <small> <%- list_categories(post.categories, {
             show_count: false,
-            class: '',
+            class: 'mdui-text-color-' + color + '-text category',
+            style: 'none',
+            separator: '>'
+        }) %></small>
+        <% } %>
+    </div>
+    <div class="mdui-card-primary-subtitle mdui-typo">
+        <% if(post.tags && post.tags.length) { %>
+        <span><%- list_tags(post.tags, {
+            show_count: false,
+            class: 'tag',
             style: 'none',
             separator: ' '
         }) %> <%= theme.m.syntax %></span><% } %>
-        <span mdui-tooltip="{content:'<%= __("post.date") %><%- date(post.date, "YYYY-MM-DD") %><% if(post.updated) { %><br><%= __("post.updated") %><%- date(post.updated, "YYYY-MM-DD") %><% } %>'}"><%- date(post.date, "YYYY-MM-DD") %> <%= theme.m.syntax %></span>
+        <span mdui-tooltip="{content:'<%= __("post.date") %><%- date(post.date, "YYYY-MM-DD hh:mm") %><% if(post.updated) { %><br><%= __("post.updated") %><%- date(post.updated, "YYYY-MM-DD hh:mm") %><% } %>'}"><%- date(post.date, "YYYY-MM-DD") %> <%= theme.m.syntax %></span>
         <span><%= post.path %></span>
     </div>
 </div>

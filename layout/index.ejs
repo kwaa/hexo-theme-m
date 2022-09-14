@@ -1,9 +1,9 @@
 <%- partial('_widget/index_toolbar') %>
-<% page.posts.each(function (post) { %>
-    <div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+<% page.posts.each(post => { %>
     <%- partial('_partial/card_post', {post: post}) %>
-    </div>
 <% }) %>
+</div>
 <% if(page.total > 1) { %>
     <%- partial('_widget/index_paginator') %>
 <% } %>

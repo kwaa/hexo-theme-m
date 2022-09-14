@@ -1,0 +1,19 @@
+{
+  "name": "hexo-theme-m",
+  "version": "0.0.1",
+  "description": "Theme M for Hexo.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwaa/m.git"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme"
+  ],
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/kwaa/m/issues"
+  },
+  "homepage": "https://github.com/kwaa/m#readme"
+}

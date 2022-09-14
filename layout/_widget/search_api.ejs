@@ -1,0 +1,21 @@
+<form onsubmit="return searchAPI(this.searchTerm.value);" class="mdui-textfield mdui-m-b-2">
+    <i class="mdui-icon material-icons">search</i>
+    <input id="searchTerm" type="search" name="q" class="mdui-textfield-input"
+        placeholder="<%= __('common.search') %>">
+</form>
+<div id="api-result" style="min-height:100vh; transition: all .4s" class="mdui-list">
+</div>
+<script>
+    function searchAPI(searchTerm) {
+        fetch(`https://search.kwaa.workers.dev/?q=${searchTerm}<% if(theme.search.api.site !== false) { %>&siteSearch=<% if(theme.search.api.site == '') { %><%= config.root %><% } else { %><%= theme.search.api.site %><% }} if (theme.search.api.key && theme.search.api.id) { %>&key=<%= theme.search.api.key %>&cx=<%= theme.search.api.id %><% } %>`)
+        .then(res => res.json().then(json => json.items.forEach(({title, link, snippet}) => document.getElementById('api-result').insertAdjacentHTML('beforeend', `
+            <a class="mdui-list-item mdui-ripple" href="${link}">
+                <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title mdui-list-item-one-line">${title}</div>
+                    <div class="mdui-list-item-text mdui-list-item-two-line">${snippet}</div>
+                </div>
+            </a>`)
+        )))
+        return false;
+    }
+</script>

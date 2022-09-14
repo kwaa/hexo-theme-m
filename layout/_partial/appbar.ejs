@@ -1,6 +1,6 @@
 <header id="appbar" class="mdui-appbar mdui-appbar-fixed mdui-shadow-0 <% if(theme.appbar.scroll_hide) { %>mdui-appbar-scroll-hide<% } %>">
     <div class="mdui-toolbar">
-        <button mdui-drawer="{target: '.mdui-drawer'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></button>
+        <button mdui-drawer="{target: '.mdui-drawer'}" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">menu</i></button>
         <% if(theme.appbar.title == true) { %><a href="<%= config.root %>" class="mdui-typo-title"><%= config.title %></a><% } %>
         <div class="mdui-toolbar-spacer"></div>
         <% if(theme.appbar.search == true) { %>
