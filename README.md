@@ -23,6 +23,8 @@ git clone https://github.com/kwaa/hexo-theme-m themes/m # git
 
 ### Enable
 
+###### _config.yml
+
 ```diff
 # Extensions
 ## Plugins: https://hexo.io/plugins/
