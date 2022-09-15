@@ -9,10 +9,10 @@ hexo.extend.filter.register('after_post_render', (data) => ({
     )
     .replace(/\bvideo-container\b/g, 'mdui-video-container')
     .replace(
-      /<table>/g,
+      /(?<!<figure class="[a-zA-Z0-9:;\.\s\(\)\-\,]*">)<table>/g,
       '<div class="mdui-table-fluid mdui-shadow-0"><table class="mdui-table mdui-table-hoverable">'
     )
-    .replace(/<\/table>/g, '</table></div>')
+    .replace(/<\/table>(?!<\/figure>)/g, '</table></div>')
     .replace(
       /<h1 id="([^"]*)">([^<]*)<\/h1>/g,
       '<h1 class="mdui-valign" id="' +
