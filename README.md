@@ -4,6 +4,8 @@ Yet Another Material Theme for Hexo.
 
 ## Usage
 
+### Install
+
 ###### via NPM (currently unavailable)
 
 ```bash
@@ -17,6 +19,16 @@ npm i hexo-theme-m # npm
 ```bash
 git clone https://github.com/kwaa/hexo-theme-m themes/m # git
 # npx degit kwaa/hexo-theme-m themes/m # degit
+```
+
+### Enable
+
+```diff
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+- theme: landscape
++ theme: m
 ```
 
 ## License
