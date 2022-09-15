@@ -1,6 +1,5 @@
-hexo.extend.filter.register('after_post_render', (data) => ({
-  ...data,
-  content: data.content
+hexo.extend.filter.register('after_render:html', (str) =>
+  str
     .replace(
       /<p>(<img [^>]*src="([^"]+)"[^>]*)><\/p>/g,
       '<figure class="mdui-img-fluid">' +
@@ -42,5 +41,5 @@ hexo.extend.filter.register('after_post_render', (data) => ({
         '&nbsp;&nbsp;</span><a aria-hidden="true" class="mdui-btn mdui-btn-icon mdui-ripple" href="#' +
         '$1' +
         '"><i class="mdui-icon material-icons">link</i></a></h3>'
-    ),
-}))
+    )
+)
