@@ -23,9 +23,28 @@ git clone https://github.com/kwaa/hexo-theme-m themes/m # git
 
 ### Enable
 
-###### _config.yml
+This theme is only compatible with PrismJS, please make sure to disable HighlightJS.
+
+Modify the `theme` field to enable the theme.
+
+###### \_config.yml
 
 ```diff
+highlight:
+- enable: true
++ enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+- enable: false
++ enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
