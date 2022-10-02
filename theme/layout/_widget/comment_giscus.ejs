@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    (() => {
+        const giscus = document.createElement('script');
+        giscus.type = 'text/javascript';
+        giscus.async = true;
+        giscus.setAttribute('data-repo', '<%- theme.comments.giscus.repo %>');
+        giscus.setAttribute('data-repo-id', '<%- theme.comments.giscus.repo_id %>');
+        giscus.setAttribute('data-category', '<%- theme.comments.giscus.category %>');
+        giscus.setAttribute('data-category-id', '<%- theme.comments.giscus.category_id %>');
+        giscus.setAttribute('data-mapping', '<%- theme.comments.giscus.mapping %>');
+        giscus.setAttribute('data-reactions-enabled', '<%- theme.comments.giscus.reactions_enabled %>');
+        giscus.setAttribute('data-input-position', '<%- theme.comments.giscus.input_position %>');
+        giscus.setAttribute('data-theme', '<%- theme.comments.giscus.theme %>');
+        giscus.setAttribute('data-lang', '<%- theme.comments.giscus.lang %>');
+        giscus.setAttribute('crossorigin', 'anonymous');
+        giscus.src = '<%- theme.comments.giscus.src %>';
+        document.getElementById('comment-giscus').appendChild(giscus);
+    })();
+</script>

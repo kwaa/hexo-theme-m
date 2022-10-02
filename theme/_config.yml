@@ -79,6 +79,16 @@ comments:
     issue_term: pathname
     theme: github-light
     src: "https://utteranc.es/client.js"
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping: pathname
+    reactions_enabled: 1
+    input_position: bottom
+    theme: preferred_color_scheme
+    src: "https://giscus.app/client.js"
 
 search:
   use: google # google
