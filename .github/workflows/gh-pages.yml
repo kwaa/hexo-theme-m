@@ -1,0 +1,11 @@
+name: GitHub Pages
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
+    with:
+      publish_dir: example/public
