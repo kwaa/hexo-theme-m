@@ -6,19 +6,22 @@ Yet Another Material Theme for Hexo.
 
 ### Install
 
-###### via NPM
+###### via NPM (stable)
+
+> use the package manager update command, such as `npm update` or `pnpm up`
 
 ```bash
 npm i hexo-theme-m # npm
 # pnpm add hexo-theme-m # pnpm
-# yarn add hexo-theme-m # yarn
 ```
 
-###### via GitHub
+###### via GitHub (latest)
+
+> delete `themes/m` folder and run this command again to update it.
 
 ```bash
-git clone https://github.com/kwaa/hexo-theme-m themes/m # git
-# npx degit kwaa/hexo-theme-m themes/m # degit
+npx degit kwaa/hexo-theme-m/theme themes/m # npx
+# pnpm dlx degit kwaa/hexo-theme-m/theme themes/m # pnpm dlx
 ```
 
 ### Enable
