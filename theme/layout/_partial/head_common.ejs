@@ -16,6 +16,13 @@
 
 <%- css(theme.vendors.mdui_css) %>
 
+<% if(config.prismjs.enable) { %>
+    <%- css(theme.vendors.prism_theme) %>
+    <% if(config.prismjs.line_numbers) { %>
+        <%- css(theme.vendors.prism_line_numbers) %>
+    <% } %>
+<% } %>
+
 <% if(theme.head.favicon) { %>
 <link rel="icon shortcut" href="<%= theme.head.favicon %>">
 <% } if(theme.head.high_res_icon) { %>
