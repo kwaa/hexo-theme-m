@@ -1,23 +1,7 @@
 {
-  "name": "hexo-theme-m",
-  "version": "0.1.0",
-  "license": "WTFPL",
-  "description": "Yet Another Material Theme for Hexo.",
-  "repository": "kwaa/hexo-theme-m",
-  "homepage": "https://github.com/kwaa/hexo-theme-m#readme",
-  "bugs": "https://github.com/kwaa/hexo-theme-m/issues",
-  "author": "藍+85CD",
-  "keywords": [
-    "hexo",
-    "hexo-theme",
-    "mdui",
-    "material design"
-  ],
-  "files": [
-    "languages",
-    "layout",
-    "scripts",
-    "source",
-    "_config.yml"
-  ]
+  "name": "hexo-theme-m-monorepo",
+  "version": "0.0.0",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm"
+  }
 }
