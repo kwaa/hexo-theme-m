@@ -96,6 +96,6 @@ vendors:
   mdui_js: "https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js" # 1.0.2
   pjax_js: "https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" # 0.2.8
   pangu_js: "https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" # 4.0.7
-  prism_theme: "https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-material-dark.css"
+  prism_theme: "https://cdn.jsdelivr.net/gh/kwaa/hexo-theme-m/theme/source/css/prism-m.css"
   prism_line_numbers: "https://cdn.jsdelivr.net/gh/PrismJS/prism/plugins/line-numbers/prism-line-numbers.css"
   busuanzi_js: "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" # 2.3
