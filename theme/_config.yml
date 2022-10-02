@@ -77,7 +77,7 @@ comments:
   utterances:
     repo: 
     issue_term: pathname
-    theme: github-light
+    theme: preferred-color-scheme
     src: "https://utteranc.es/client.js"
   giscus:
     repo:
