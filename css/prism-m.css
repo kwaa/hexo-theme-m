@@ -1,0 +1,15 @@
+@import url('https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-material-light.css')
+  (prefers-color-scheme: light) or (prefers-color-scheme: no-preference);
+
+@import url('https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-material-dark.css')
+(prefers-color-scheme: dark);
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: Source Code Pro, Roboto Mono, Consolas, Courier, 'Courier New',
+    monospace !important;
+}
+
+pre[class*='language-'] {
+  margin: 1em 0 !important;
+}
