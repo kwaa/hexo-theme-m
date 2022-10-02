@@ -11,5 +11,6 @@ pre[class*='language-'] {
 }
 
 pre[class*='language-'] {
+  border: none !important;
   margin: 1em 0 !important;
 }
