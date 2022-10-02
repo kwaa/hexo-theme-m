@@ -6,7 +6,7 @@ Yet Another Material Theme for Hexo.
 
 ### Install
 
-###### via NPM (currently unavailable)
+###### via NPM
 
 ```bash
 npm i hexo-theme-m # npm
