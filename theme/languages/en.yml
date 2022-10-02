@@ -10,7 +10,7 @@ drawer:
     links: "Links"
 
 index:
-    more: 'View more'
+    more: 'Read more'
     prev: 'Newer'
     next: 'Older'
     archive: 'Currently showing articles with archive <b>%s</b>'
