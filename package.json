@@ -12,5 +12,12 @@
     "hexo-theme",
     "mdui",
     "material design"
+  ],
+  "files": [
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml"
   ]
 }
