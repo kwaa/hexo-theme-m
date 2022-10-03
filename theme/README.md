@@ -17,7 +17,7 @@ npm i hexo-theme-m # npm
 
 ###### via GitHub (latest)
 
-> delete `themes/m` folder and run this command again to update it.
+> `rm -r themes/m` and run the following command again to update it.
 
 ```bash
 npx degit kwaa/hexo-theme-m/theme themes/m # npx
