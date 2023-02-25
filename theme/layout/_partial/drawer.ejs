@@ -1,6 +1,6 @@
 <aside class="mdui-drawer<% if(theme.mdui.drawer_close == true) { %> mdui-drawer-close<% } %>">
     <nav class="mdui-list" mdui-collapse="{accordion: true}">
-        <a <% if(theme.url.avatar) { %>href="<%= theme.url.avatar %>" <% } %> class="mdui-list-item mdui-ripple">
+        <a <% if(theme.url.avatar) { %>href="<%= url_for(theme.url.avatar) %>" <% } %> class="mdui-list-item mdui-ripple">
             <div class="mdui-list-item-avatar">
                 <% if(theme.drawer.avatar) { %>
                 <img alt="avatar" <%- theme.drawer.avatar %> />
@@ -82,7 +82,7 @@
             ©<% if(theme.footer.since) { %> <%= theme.footer.since %> - <% } %>
             <%- full_date(new Date(), 'YYYY') %> <%= config.author %><br>
             <% if(theme.footer.hosted_on) { %>
-            Hosted on <a href="<%= theme.url.hosted_on %>" rel="noreferrer"
+            Hosted on <a href="<%= url_for(theme.url.hosted_on) %>" rel="noreferrer"
                 target="_blank"><%= theme.footer.hosted_on %></a><br>
             <% } if(theme.footer.powered_by_hexo == true) { %>
             Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a><br>

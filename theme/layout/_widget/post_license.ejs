@@ -1,6 +1,6 @@
 <blockquote class="mdui-m-x-0 mdui-m-t-4">
     <strong>
-        <%= __('post.author') %><a href="<%= theme.url.avatar %>"><%= config.author %></a><br>
+        <%= __('post.author') %><a href="<%= url_for(theme.url.avatar) %>"><%= config.author %></a><br>
         <%= __('post.url') %><a href="<%= post.permalink %>"><%= post.permalink %></a><br>
         <% if(post.license) { %>
         <% if(post.license == 'false') { %>
