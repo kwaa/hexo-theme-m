@@ -1,14 +1,15 @@
 <aside class="mdui-drawer<% if(theme.mdui.drawer_close == true) { %> mdui-drawer-close<% } %>">
     <nav class="mdui-list" mdui-collapse="{accordion: true}">
-        <a href="<%= url_for(theme.url.avatar) %>" class="mdui-list-item mdui-ripple">
+        <a href="<%= url_for(theme.url.avatar) %>" class="mdui-list-item mdui-ripple h-card">
             <div class="mdui-list-item-avatar">
                 <% if(theme.drawer.avatar) { %>
-                <img alt="<%= config.author %>" src="<%- theme.drawer.avatar %>" />
+                <img alt="<%= config.author %>" class="u-photo" src="<%- theme.drawer.avatar %>" />
                 <% } else { %>
                 <i class="mdui-color-theme-primary mdui-icon material-icons">person</i>
                 <% } %>
             </div>
-            <div class="mdui-list-item-content"><%= config.author %></div>
+            <div class="mdui-list-item-content p-name"><%= config.author %></div>
+            <span style="display:none" class="u-url"><%= config.url %></span>
         </a>
         <div class="mdui-divider"></div>
         <% if(theme.drawer.search == true) { %>
