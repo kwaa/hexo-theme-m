@@ -30,7 +30,7 @@ head:
 
 url:
   rss: "/atom.xml"
-  avatar: "/about/"
+  avatar: "#"
   search: "/search/"
   links: "/links/"
   hosted_on: ""
