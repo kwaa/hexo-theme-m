@@ -3,7 +3,7 @@
         <a <% if(theme.url.avatar) { %>href="<%= url_for(theme.url.avatar) %>" <% } %> class="mdui-list-item mdui-ripple">
             <div class="mdui-list-item-avatar">
                 <% if(theme.drawer.avatar) { %>
-                <img alt="avatar" src="<%- theme.drawer.avatar %>" />
+                <img alt="<%= config.author %>" src="<%- theme.drawer.avatar %>" />
                 <% } else { %>
                 <i class="mdui-color-theme-primary mdui-icon material-icons">person</i>
                 <% } %>
