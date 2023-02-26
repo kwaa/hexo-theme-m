@@ -1,4 +1,4 @@
-<<% if(is_post() || is_page()) { %>article<% } else { %>section<% } %> <%- fragment_cache ('card_style', function (){
+<article <%- fragment_cache ('card_style', function (){
     return partial ('_partial/card_style');
 }) %>>
     <% if(post.thumbnail) { %>
@@ -27,4 +27,4 @@
         <% }} %>
     </div>
     <% } %>
-</<% if(is_post() || is_page()) { %>article<% } else { %>section<% } %>>
+</article>
