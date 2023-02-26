@@ -1,8 +1,9 @@
-<div class="mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
-<% page.posts.each(post => { %>
-    <%- partial('_partial/card_post', {post: post}) %>
-<% }) %>
-</div>
-<% if(page.total > 1) { %>
-    <%- partial('_widget/index_paginator') %>
-<% } %>
+<section class="h-feed mdui-theme-layout-<%= theme.mdui.layout %> mdui-color-transparent">
+    <a href="<%= config.url %>" class="p-name u-url" style="display:none"><%= config.title %></a>
+    <% page.posts.each(post => { %>
+        <%- partial('_partial/card_post', {post: post}) %>
+    <% }) %>
+    <% if(page.total > 1) { %>
+        <%- partial('_widget/index_paginator') %>
+    <% } %>
+</section>
