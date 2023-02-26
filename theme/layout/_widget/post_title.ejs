@@ -1,6 +1,7 @@
 <div class="mdui-card-primary mdui-ripple">
     <div class="mdui-card-primary-title">
-        <a role="heading" aria-level="1" class="p-name mdui-text-color-<%= color %>-text" <%if(post !== page) { %>href="<%- url_for(post.path) %>"<% } %>><%= post.title %></a>
+        <a role="heading" aria-level="1" class="u-url p-name mdui-text-color-<%= color %>-text" <%if(post !== page) { %>href="<%- url_for(post.path) %>"<% } %>><%= post.title %></a>
+        <a class="p-author h-card" style="display:none" href="<%= config.url %>"><%= config.author %></a>
         <% if(post.categories && post.categories.length) { %>
         <small> <%- list_categories(post.categories, {
             show_count: false,
@@ -19,7 +20,7 @@
             separator: ' '
         }) %></span>
         <span><%= theme.m.syntax %></span><% } %>
-        <time mdui-tooltip="{content:'<%= __("post.date") %><%- date(post.date, "YYYY-MM-DD hh:mm") %><% if(post.updated) { %><br><%= __("post.updated") %><%- date(post.updated, "YYYY-MM-DD hh:mm") %><% } %>'}" datetime="<%- date_xml(post.date) %>"><%- date(post.date, "YYYY-MM-DD") %></time>
+        <time class="dt-published" mdui-tooltip="{content:'<%= __("post.date") %><%- date(post.date, "YYYY-MM-DD hh:mm") %><% if(post.updated) { %><br><%= __("post.updated") %><%- date(post.updated, "YYYY-MM-DD hh:mm") %><% } %>'}" datetime="<%- date_xml(post.date) %>"><%- date(post.date, "YYYY-MM-DD") %></time>
         <span><%= theme.m.syntax %></span>
         <% if(post.title) { %>
             <span><%= post.path %></span>

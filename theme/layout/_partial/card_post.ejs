@@ -1,7 +1,7 @@
 <article <%- fragment_cache('card_style', () => partial('_partial/card_style')) %>>
     <% if(post.thumbnail) { %>
     <div class="mdui-card-media">
-        <img loading="lazy" alt="thumbnail" src="<%= post.thumbnail %>" />
+        <img loading="lazy" alt="thumbnail" class="u-featured" src="<%= post.thumbnail %>" />
         <% if(theme.posts.thumbnail_title == true) { %>
         <div class="mdui-card-media-covered <% if(theme.mdui.card_media_covered !== 'normal') { %>mdui-card-media-covered-<%= theme.mdui.card_media_covered %><% } %>">
             <%- partial('_widget/post_title', {color: 'white'}) %>
@@ -15,11 +15,12 @@
     <div class="mdui-divider"></div>
     <div class="mdui-card-content mdui-typo">
         <% if(is_post() || is_page() || theme.posts.index_content == 'content' || theme.posts.index_content == 'auto' && !post.excerpt) { %>
-        <%- post.content %>
+        <div class="p-summary" style="display:none"><%- post.excerpt %></div>
+        <main class="e-content"><%- post.content %></main>
         <% if(theme.posts.license !== false && post.license !== false) { %>
         <%- partial ('_widget/post_license', {post: post}) %>
         <% }} else { %>
-            <%- post.excerpt %>
+            <main class="p-summary"><%- post.excerpt %></main>
             <% if(theme.posts.view_more !== false && post.view_more !== false) { %>
             <a class="mdui-btn mdui-btn-block mdui-ripple" href="<%- url_for(post.path) %>"><%= __("index.more") %></a>
         <% }} %>
