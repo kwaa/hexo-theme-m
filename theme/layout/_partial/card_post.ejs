@@ -1,6 +1,4 @@
-<article <%- fragment_cache ('card_style', function (){
-    return partial ('_partial/card_style');
-}) %>>
+<article <%- fragment_cache('card_style', () => partial('_partial/card_style')) %>>
     <% if(post.thumbnail) { %>
     <div class="mdui-card-media">
         <img loading="lazy" alt="thumbnail" src="<%= post.thumbnail %>" />
